@@ -43,6 +43,9 @@
   "scripts": {
     "lint": "eslint .",
     "test": "mocha ./test/test*.js --reporter spec",
+    "docker:build": "docker build -t hex0cter/cors-anywhere .",
+    "docker:run": "docker run --rm -it -P hex0cter/cors-anywhere",
+    "docker:push": "docker push hex0cter/cors-anywhere",
     "test-coverage": "istanbul cover ./node_modules/.bin/_mocha -- test/test.js test/test-ratelimit.js --reporter spec"
   },
   "engines": {
